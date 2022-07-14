@@ -1,4 +1,4 @@
-package dev.jamile.newsapp.newsList
+package dev.jamile.newsapp.ui.newsList
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
