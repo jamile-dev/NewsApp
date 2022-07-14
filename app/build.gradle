@@ -6,6 +6,10 @@ plugins {
 android {
     compileSdk 32
 
+    buildFeatures {
+        viewBinding true
+    }
+
     defaultConfig {
         applicationId "dev.jamile.newsapp"
         minSdk 21
@@ -42,6 +46,10 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3"
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
 
     // Koin
     implementation "io.insert-koin:koin-core:3.2.0"
