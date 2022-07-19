@@ -1,7 +1,10 @@
 package dev.jamile.newsapp.ui.newsList
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import dev.jamile.newsapp.databinding.NewsItemBinding
@@ -25,12 +28,16 @@ class NewsAdapter(private val newsList: List<News>) :
                     it.description.text = this.description
                 }
 
-                Glide.with(holder.itemView.context)
+                Glide
+                    .with(holder.itemView.context)
                     .load(urlToImage)
+                    .centerCrop()
                     .into(binding.newsImage)
 
                 holder.itemView.setOnClickListener {
-
+                    val intent = Intent(Intent.ACTION_VIEW)
+                    intent.data = Uri.parse(url)
+                    startActivity(it.context, intent, null)
                 }
             }
         }

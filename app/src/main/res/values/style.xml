@@ -2,6 +2,6 @@
 <resources>
     <style name="CardViewStyle">
         <item name="cardCornerRadius">5dp</item>
-        <item name="cardBackgroundColor">#F8F4F9</item>
+        <item name="cardBackgroundColor">#CACFD6</item>
     </style>
 </resources>
