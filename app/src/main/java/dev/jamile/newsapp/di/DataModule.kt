@@ -7,7 +7,9 @@ import org.koin.dsl.module
 val dataModule = module {
 
     single {
-        NewsRepository(get<NewsApi>())
+        NewsRepository(
+            api = get()
+        )
     }
 
 }
