@@ -7,12 +7,12 @@ class NewsMapper: GeneralMapper<Article, News> {
 
     override fun convert(model: Article) =
         News(
-            author = model.author,
-            title = model.title,
-            description = model.description,
-            url = model.url,
-            urlToImage = model.urlToImage,
-            sourceName = model.source.name
+            author = model.author ?: "",
+            title = model.title ?: "",
+            description = model.description ?: "",
+            url = model.url ?: "",
+            urlToImage = model.urlToImage ?: "",
+            sourceName = model.source?.name ?: ""
         )
 
 }
