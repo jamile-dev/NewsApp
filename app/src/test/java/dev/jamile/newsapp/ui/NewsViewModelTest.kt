@@ -3,6 +3,7 @@ package dev.jamile.newsapp.ui
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import dev.jamile.newsapp.domain.NewsUseCase
 import dev.jamile.newsapp.domain.model.News
+import dev.jamile.newsapp.network.ResponseError
 import dev.jamile.newsapp.util.TestProviderContext
 import dev.jamile.newsapp.util.readJsonFile
 import io.mockk.coEvery
@@ -35,6 +36,23 @@ class NewsViewModelTest {
 
         viewModel.fetchNews()
         assertEquals(5, viewModel.newList.value?.data?.size)
+    }
+
+    @Test
+    fun `should show message error when list news return callback onError`() {
+        val responseErrorResult = ResponseError(cause = Throwable("Error"))
+        coEvery {
+            newsUseCase.list(
+                country = "br",
+                onSuccess = any(),
+                onError = captureLambda()
+            )
+        } coAnswers {
+            lambda<((ResponseError) -> Unit)>().invoke(responseErrorResult)
+        }
+
+        viewModel.fetchNews()
+        assertEquals("Error", viewModel.newList.value?.error?.cause?.message)
     }
 
 }
