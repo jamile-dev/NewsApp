@@ -1,0 +1,42 @@
+[
+  {
+    "author": "author 1",
+    "title": "title 1",
+    "description": "description 1",
+    "url": "url 1",
+    "urlToImage": "urlToImage 1",
+    "sourceName": "sourceName 1"
+  },
+  {
+    "author": "author 2",
+    "title": "title 2",
+    "description": "description 2",
+    "url": "url 2",
+    "urlToImage": "urlToImage 2",
+    "sourceName": "sourceName 2"
+  },
+  {
+    "author": "author 3",
+    "title": "title 3",
+    "description": "description 3",
+    "url": "url 3",
+    "urlToImage": "urlToImage 3",
+    "sourceName": "sourceName 3"
+  },
+  {
+    "author": "author 4",
+    "title": "title 4",
+    "description": "description 4",
+    "url": "url 4",
+    "urlToImage": "urlToImage 4",
+    "sourceName": "sourceName 4"
+  },
+  {
+    "author": "author 5",
+    "title": "title 5",
+    "description": "description 5",
+    "url": "url 5",
+    "urlToImage": "urlToImage 5",
+    "sourceName": "sourceName 5"
+  }
+]
