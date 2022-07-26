@@ -7,7 +7,7 @@ import org.koin.dsl.module
 val uiModule = module {
     viewModel {
         NewsViewModel(
-            newsUseCase = get(),
+            getListTopNewsUseCase = get(),
             providerContext = get()
         )
     }
