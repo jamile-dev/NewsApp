@@ -28,9 +28,9 @@ class NewsAdapter(private val newsList: List<News>) :
                     it.description.text = this.description
                 }
 
-                Glide
-                    .with(holder.itemView.context)
+                Glide.with(holder.itemView.context)
                     .load(urlToImage)
+                    .placeholder(android.R.drawable.ic_menu_agenda)
                     .centerCrop()
                     .into(binding.newsImage)
 
